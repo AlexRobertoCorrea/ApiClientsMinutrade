@@ -8,7 +8,7 @@ var nconf = require('nconf');
 var global = __dirname + '/config.json';
 var test   = __dirname +'/config_test.json';
 
-console.log("Configuring globo-newsource-v2! Welcome!");
+console.log("Configuring api-client-minutrade! Welcome!");
 console.log("  argv             : [parametros linha de comando] ");
 nconf.argv();
 console.log("  env              : [variaveis de ambiente] ");
