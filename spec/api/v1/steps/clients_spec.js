@@ -192,19 +192,13 @@ module.exports = function(app) {
 
 			request(app)
 				.delete('/api/v1/client/'+client.id)
-				.expect(200)
+				.expect(204)
 				.end(function (err, res) {
 					if (err) {
 						console.log(JSON.stringify(err, null, 3));
 						done(err);
 					}
 					else {
-						var json = res.body;
-//                        console.log(JSON.stringify(json, null, 3));
-
-						expect(json).to.be.a('string');
-						expect(json).to.equal('Client successfully deleted.');
-
 						done();
 					}
 				});
