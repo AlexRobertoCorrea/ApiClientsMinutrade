@@ -8,7 +8,7 @@ angular.module('api-clients-minutrade', [
 	'ngCookies',
 	'ui.router',
 	'ui.bootstrap',
-	'ngAnimate',
+	//'ngAnimate',
 	'ui.utils',
 	'ui.mask',
 	'angularMoment',
@@ -80,7 +80,10 @@ angular.module('api-clients-minutrade', [
 		;
 
 		// use the HTML5 History API
-		$locationProvider.html5Mode(true);
+		$locationProvider.html5Mode({
+			enabled: true,
+			requireBase: false
+		});
 
 		//Configurando interceptor para todas requisicoes http
 		$httpProvider.interceptors.push('HttpInterceptor');

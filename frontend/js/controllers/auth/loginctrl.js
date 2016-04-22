@@ -56,7 +56,6 @@ angular.module('api-clients-minutrade')
 						.then(function(auth) {
 							$state.go('clientlist');
 						}, function(res) {
-							console.log(res)
 							if (res && res[0] && res[0].code==2)
 								$scope.alert={prefix: 'Ops!', text:'That e-mail / password combination is not valid...',type:'alert alert-danger'};
 							else

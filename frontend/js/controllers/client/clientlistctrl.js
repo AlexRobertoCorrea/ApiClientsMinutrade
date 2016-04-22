@@ -53,12 +53,6 @@ angular.module('api-clients-minutrade')
 				delete $scope.alert;
 			};
 
-			$scope.toPage = function(number) {
-				$scope.currentPage = number;
-				$scope.start = (number - 1) * $scope.limit;
-				$scope.selectedAll = false;
-				_getClient();
-			};
 			$scope.prevPage = function() {
 				if ($scope.currentPage > 1) {
 					$scope.currentPage = $scope.currentPage - 1;
