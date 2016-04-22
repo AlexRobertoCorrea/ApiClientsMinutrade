@@ -9,6 +9,18 @@ global['clientTeste'] = {
 	email : "test@test.com",
 	CPF : "13926785527",
 	address : "test",
-	phone_number : ['03133334444'],
-	marital_status : "single"
+	phone_number : ['3133334444'],
+	marital_status : "single",
+	password: 'teste'
+};
+
+global['clientTeste2'] = {
+	name : "test",
+	surname : "test",
+	email : "test2@test.com",
+	CPF : "14997287784",
+	address : "test",
+	phone_number : ['3133334444'],
+	marital_status : "single",
+	password: 'teste'
 };

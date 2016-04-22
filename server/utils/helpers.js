@@ -27,10 +27,10 @@ function verifyCPF(cpf){
 }
 
 function verifyPhoneNumber(phone_numbers) {
-	//xxx xxxxx xxxx || xxx xxxx xxxx
+	//xx xxxxx xxxx || xx xxxx xxxx
 	for (var i = 0; i < phone_numbers.length; i++)
 	{
-		if(!(phone_numbers[i][3]=='9'?/[0-9]{3}[9][0-9]{8}/.test(phone_numbers[i]):/[0-9]{3}[0-9]{8}/.test(phone_numbers[i])))
+		if(!(phone_numbers[i][2]=='9'?/[0-9]{2}[9][0-9]{8}/.test(phone_numbers[i]):/[0-9]{2}[0-9]{8}/.test(phone_numbers[i])))
 			return false;
 	}
 	return true;

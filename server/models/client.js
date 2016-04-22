@@ -10,6 +10,7 @@ var maritalStatusValues=['single', 'married', 'divorced'];
 var ClientSchema   = new Schema({
 	name: {type: String, required: true, trim:true},
 	surname: String,
+	password: {type:String, required: true},
 	email: {type: String, required: true, unique:true, trim:true},
 	CPF: {type: String, required: true, unique:true},
 	address: String,
@@ -38,6 +39,7 @@ ClientSchema.set('toJSON', {
 	transform: function (doc, ret, options) {
 		delete ret._id;
 		delete ret.__v;
+		delete ret.password;
 	}
 });
 

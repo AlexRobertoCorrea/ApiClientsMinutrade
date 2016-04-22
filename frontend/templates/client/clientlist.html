@@ -1,0 +1,45 @@
+<div ng-init="main()">
+    <alert ng-show="alert" type="{{alert.type}}" close="close()">{{alert.msg}}</alert>
+    <nav-menu></nav-menu>
+    <div id="dash container" class="well well-small ng-scope clientListHeader">
+        <div class="pull-right form-group has-feedback search-filter">
+            <input type="text" class="form-control " ng-keyup="search()"  placeholder="Search user"
+                   ng-model="searchQuery"/><i class="glyphicon glyphicon-search"></i>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                    <th>address</th>
+                    <th>Marital status</th>
+                    <th>Phone number(s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="client in clients">
+                    <td>
+                        {{client.name}} {{client.surname}}<br>
+                        <a href="#" ng-click="deleteUser(client)">Apagar</a> |
+                        <a ui-sref="clientedit({id: client.id, saved:true})">Editar</a>
+                    </td>
+                    <td>{{client.email}}</td>
+                    <td>{{client.CPF}}</td>
+                    <td>{{client.address}}</td>
+                    <td class="first-letter">{{client.marital_status}}</td>
+                    <td>{{client.phone_numbers}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <nav ng-show="clients.length>0&&pageNumber>1">
+        <ul class="pagination">
+            <li><a href="#" ng-click="prevPage()" class="disabled" ng-class="{disabled: currentPage == 1}">Before</a></li>
+            {{currentPage}}/{{pageNumber}}
+            <li><a href="#" ng-click="nextPage()" ng-class="{disabled: currentPage == pageNumber}">Next</a></li>
+        </ul>
+    </nav>
+</div>

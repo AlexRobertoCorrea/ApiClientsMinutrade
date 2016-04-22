@@ -1,0 +1,34 @@
+<div ng-class="alert.type" role="alert" ng-show="alert">
+    <strong>{{alert.prefix}}</strong> {{alert.text}}
+    <span class="pull-right close-alert" ng-click="close()">
+        <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+    </span>
+</div>
+
+<div class="center">
+    <h1>Login</h1>
+</div>
+
+<div class="center">
+    <form>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control no-border" ng-keyup="$event.keyCode == 13 && user.email
+            && user.password ? login(user) : null" placeholder="Email" ng-model="user.email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control no-border" ng-keyup="$event.keyCode == 13 && user.email
+            && user.password ? login(user) : null" placeholder="Password" ng-model="user.password">
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary btn-block btn-lg" ng-disabled="!user.email||!user.password"
+                    ng-click="login(user)">Login</button>
+        </div>
+    </form>
+</div>
+
+<div class="center">
+    <p>Don't have an account? <a href="" ui-sref="signup()">Register here</a></p>
+</div>

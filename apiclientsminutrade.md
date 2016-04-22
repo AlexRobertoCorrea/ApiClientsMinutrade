@@ -1,5 +1,4 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
 
 # Api Clients Minutrade - Alex Roberto
 
@@ -9,7 +8,7 @@ required for the integration between the users and the appraisal management plat
 All the API communication is performed via HTTP-based REST pattern and
 using JSON data format.
 
-## Clients Collection [/clients]
+## Clients Collection
 
 ###### Clients Parameter: 
 
@@ -20,6 +19,7 @@ using JSON data format.
 | updatedAt      | string   | N           | User update date (output only).
 | name           | string   | Y           | First name.
 | surname        | string   | N           | User surname.
+| password       | string   | S           | User password.
 | email          | string   | S           | User email.
 | CPF            | string   | S           | User document identification.
 | address        | string   | N           | User address.
@@ -42,6 +42,7 @@ object containing a client collection with the parameters below.
                 "name": "test",
                 "surname": "test",
                 "email": "test@test.com",
+                "password": "test"
                 "CPF": "13926785527",
                 "address": "test",
                 "phone_number": ["03133334444"],

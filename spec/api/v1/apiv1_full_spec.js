@@ -10,3 +10,6 @@ require('./steps/helpers_spec.js')(globo.app);
 
 // Clients Tests
 require('./steps/clients_spec.js')(globo.app);
+
+// Auth Tests
+require('./steps/auth_spec.js')(globo.app);

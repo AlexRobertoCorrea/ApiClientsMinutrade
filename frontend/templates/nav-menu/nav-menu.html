@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs ng-scope">
+    <li role="presentation" ng-class="leftActive"><a href="#" ng-click="nextTab()">{{leftTab}}</a></li>
+    <li role="presentation" ng-class="rightActive"><a href="#" ng-click="nextTab()">{{rightTab}}</a></li>
+    <li class="btn-group pull-right" dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary" dropdown-toggle>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{auth.client.name}}
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+            <li><a href="#" ng-click="doLogout()">Sign out</a></li>
+        </ul>
+    </li>
+</ul>

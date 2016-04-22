@@ -28,33 +28,33 @@ module.exports = function() {
 		});
 
 		it('[teste]\t Verify phone number that starts with 9 with correct value', function (done) {
-			expect(helpers.verifyPhoneNumber(['031933334444'])).to.be.a('boolean');
+			expect(helpers.verifyPhoneNumber(['31933334444'])).to.be.a('boolean');
 
-			expect(helpers.verifyPhoneNumber(['031933334444'])).to.equal(true);
+			expect(helpers.verifyPhoneNumber(['31933334444'])).to.equal(true);
 
 			done();
 		});
 
 		it('[teste]\t Verify phone number that starts with 9 with wrong value', function (done) {
-			expect(helpers.verifyPhoneNumber(['03193333444'])).to.be.a('boolean');
+			expect(helpers.verifyPhoneNumber(['3193333444'])).to.be.a('boolean');
 
-			expect(helpers.verifyPhoneNumber(['03193333444'])).to.equal(false);
+			expect(helpers.verifyPhoneNumber(['3193333444'])).to.equal(false);
 
 			done();
 		});
 
 		it('[teste]\t Verify phone number that doesn\'t start with 9 with correct value', function (done) {
-			expect(helpers.verifyPhoneNumber(['03133334444'])).to.be.a('boolean');
+			expect(helpers.verifyPhoneNumber(['3133334444'])).to.be.a('boolean');
 
-			expect(helpers.verifyPhoneNumber(['03133334444'])).to.equal(true);
+			expect(helpers.verifyPhoneNumber(['3133334444'])).to.equal(true);
 
 			done();
 		});
 
 		it('[teste]\t Verify phone number that doesn\'t start with 9 with wrong value', function (done) {
-			expect(helpers.verifyPhoneNumber(['0313333444'])).to.be.a('boolean');
+			expect(helpers.verifyPhoneNumber(['313333444'])).to.be.a('boolean');
 
-			expect(helpers.verifyPhoneNumber(['0313333444'])).to.equal(false);
+			expect(helpers.verifyPhoneNumber(['313333444'])).to.equal(false);
 
 			done();
 		});

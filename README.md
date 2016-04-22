@@ -19,6 +19,24 @@ To use Api Clients Minutrade, you'll need:
 If you'd like how to use the Api Clients Minutrade, please, go to [Api Clients Minutrade with Apiary](http://docs.apiclientsminutrade.apiary.io/) where you can 
 see all operations and its detailed examples.
 
+## Website (new\*)
+
+Now is possible access the api via website. So, you need run:
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+From here, you have two options: run `node server.js` and access `http://localhost:3002/` or you can run
+a fast version doing `grunt serve:dist` and access `http://localhost:3000/`.
+
+The website is very intuitive, you need create a user and login. You can create other clients or
+edit the existing clients.
+
 ## How it was made
 
 The Api Clients Minutrade was made using NodeJS, Express framework and MongoDB database in
