@@ -39,6 +39,6 @@ edit the existing clients.
 
 ## How it was made
 
-The Api Clients Minutrade was made using NodeJS, Express framework and MongoDB database in
+The Api Clients Minutrade was made using NodeJS, Express framework, AngularJS and MongoDB database in
 GNU/Linux dist Ubuntu 15.10. We have decided to use this tools because it is easy 
 work with json format, *Javascript* and [Mongoose](http://mongoosejs.com/).
