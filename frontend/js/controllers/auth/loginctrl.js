@@ -79,7 +79,7 @@ angular.module('api-clients-minutrade')
 
 					ClientService.createClient($scope.client)
 						.then(function(res) {
-							$scope.alert={text:$scope.client.surname?$scope.client.name + " " + $scope.client.surname:$scope.client.name+" was successfully created!",type:'alert alert-success'};
+							$scope.alert={text:($scope.client.surname?$scope.client.name + " " + $scope.client.surname:$scope.client.name)+" was successfully created!",type:'alert alert-success'};
 							$scope.saving = false;
 						})
 						.catch(function(err){
