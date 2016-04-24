@@ -12,7 +12,7 @@ To use Api Clients Minutrade, you'll need:
 - Use the command line (if you are using GNU/Linux) `cd ApiClientsMinutrade`
 - Install the dependences: `npm install`
 - Start using the api with `node server.js`
-- Or you can run the tests witn `grunt test`
+- Or you can run the tests witn `npm test`
 
 ## Tutorial
 
