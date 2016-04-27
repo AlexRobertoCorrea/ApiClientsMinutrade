@@ -23,8 +23,8 @@
                 <tr ng-repeat="client in clients">
                     <td>
                         {{client.name}} {{client.surname}}<br>
-                        <a href="#" ng-click="deleteUser(client)">Apagar</a> |
-                        <a ui-sref="clientedit({id: client.id, saved:true})">Editar</a>
+                        <a href="#" ng-click="deleteUser(client)">Delete</a> |
+                        <a ui-sref="clientedit({id: client.id, saved:true})">Edit</a>
                     </td>
                     <td>{{client.email}}</td>
                     <td>{{client.CPF}}</td>

@@ -32,12 +32,7 @@ function md5(string) {
 	return crypto.createHash('md5').update(string).digest('hex');
 }
 
-function generateRandomHash(){
-	return crypto.randomBytes(16).toString('hex');
-}
-
 module.exports = {
 	'hash': createHash,
-	'validate': validateHash,
-	'generateRandomHash': generateRandomHash
+	'validate': validateHash
 };

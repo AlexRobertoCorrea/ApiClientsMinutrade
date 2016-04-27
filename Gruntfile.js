@@ -131,7 +131,7 @@ module.exports = function (grunt) {
 				tasks: ['newer:jshint:test', 'karma']
 			},
 			styles: {
-				files: ['<%= yeoman.app %>/css/**/*.css'],
+				files: ['<%= yeoman.app %>/css/*.css'],
 				tasks: ['newer:copy:styles', 'autoprefixer']
 			},
 			gruntfile: {
@@ -144,7 +144,7 @@ module.exports = function (grunt) {
 				},
 				files: [
 					'<%= yeoman.app %>/**/*.html',
-					'.tmp/css/**/*.css',
+					'.tmp/css/*.css',
 					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg,ico,psd}'
 				]
 			},
@@ -223,9 +223,7 @@ module.exports = function (grunt) {
 				files: {
 					src: [
 						'<%= yeoman.dist %>/js/{,*/}*.js',
-						'<%= yeoman.dist %>/css/**/*.css',
-						'!<%= yeoman.dist %>/css/bootstrap.min.css',
-						'!<%= yeoman.dist %>/css/index.min.css'
+						'<%= yeoman.dist %>/css/**/*.css'
 //                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg,ico,psd}',
 //                        '<%= yeoman.dist %>/fonts/*'
 					]
@@ -238,7 +236,7 @@ module.exports = function (grunt) {
 		// additional tasks can operate on them
 		useminPrepare: {
 			html: '<%= yeoman.app %>/index.html',
-			css: '<%= yeoman.dist %>/css/**/*.css',
+			css: '<%= yeoman.dist %>/css/*.css',
 			options: {
 				dest: '<%= yeoman.dist %>'
 			}
@@ -247,7 +245,7 @@ module.exports = function (grunt) {
 		// Performs rewrites based on rev and the useminPrepare configuration
 		usemin: {
 			html: ['<%= yeoman.dist %>/**/*.html'],
-			css: ['<%= yeoman.dist %>/css/**/*.css'],
+			css: ['<%= yeoman.dist %>/css/*.css'],
 			options: {
 				assetsDirs: ['<%= yeoman.dist %>']
 			}
@@ -327,9 +325,8 @@ module.exports = function (grunt) {
 						'*.html',
 						'**/*.html',
 						'bower_components/**/*',
-						'images/**/*',
-						'fonts/**/*',
-						'css/fonts/**/*'
+						'images/*',
+						'fonts/*'
 					]
 				}, {
 					expand: true,
@@ -341,16 +338,6 @@ module.exports = function (grunt) {
 					cwd: '.tmp/js',
 					dest: '<%= yeoman.dist %>/js',
 					src: 'constants.js'
-				}, {
-					expand: true,
-					cwd: 'dist/css',
-					dest: '<%= yeoman.dist %>/css',
-					src: 'index.min.css'
-				}, {
-					expand: true,
-					cwd: 'dist/css',
-					dest: '<%= yeoman.dist %>/css',
-					src: 'bootstrap.min.css'
 				}]
 			},
 			styles: {
@@ -358,37 +345,19 @@ module.exports = function (grunt) {
 				cwd: '<%= yeoman.app %>/css',
 				dest: '.tmp/css/',
 				src: '**/*.css'
-			},
-			bootstrap: {
-				expand: true,
-				cwd: '<%= yeoman.app %>/css',
-				dest: 'dist/css',
-				src: 'bootstrap.min.css'
-			},
-			index: {
-				expand: true,
-				cwd: '<%= yeoman.app %>/css',
-				dest: 'dist/css',
-				src: 'index.min.css'
 			}
 		},
 
 		// Run some tasks in parallel to speed up the build process
 		concurrent: {
 			server: [
-				'copy:styles',
-				'copy:bootstrap',
-				'copy:index'
+				'copy:styles'
 			],
 			test: [
-				'copy:styles',
-				'copy:bootstrap',
-				'copy:index'
+				'copy:styles'
 			],
 			dist: [
-				'copy:styles',
-				'copy:bootstrap',
-				'copy:index'
+				'copy:styles'
 			]
 		},
 

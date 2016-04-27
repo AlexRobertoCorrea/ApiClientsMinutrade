@@ -8,6 +8,9 @@ require('./bootstrap.js');
 // Helpers Tests
 require('./steps/helpers_spec.js')(apiclientsminutrade.app);
 
+// Crypter Tests
+require('./steps/crypter_spec.js')(apiclientsminutrade.app);
+
 // Clients Tests
 require('./steps/clients_spec.js')(apiclientsminutrade.app);
 
