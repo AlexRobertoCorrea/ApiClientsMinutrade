@@ -418,8 +418,8 @@ module.exports = function (grunt) {
 
 		var mongoose   = require('mongoose');
 
-		var globoConfig = require('./server/config');
-		var uri = globoConfig.get('db:uri');
+		var config = require('./server/config');
+		var uri = config.get('db:uri');
 
 		console.log('Will drop db \''+uri+'\'...');
 

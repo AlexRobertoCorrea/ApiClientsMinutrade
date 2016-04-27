@@ -8,11 +8,11 @@ angular.module('api-clients-minutrade')
 
 		function storeAuth(auth) {
 			_auth = auth;
-			$window.localStorage.globoAuthId=auth.id;
+			$window.localStorage.authId=auth.id;
 		}
 		function getAuthId() {
 			try {
-				return $window.localStorage.globoAuthId;
+				return $window.localStorage.authId;
 			} catch(e) {}
 		}
 

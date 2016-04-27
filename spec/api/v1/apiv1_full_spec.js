@@ -1,15 +1,15 @@
 /**
  * Created by alex on 19/04/16.
  */
-var globo = require('../../../server.js');
+var apiclientsminutrade = require('../../../server.js');
 
 require('./bootstrap.js');
 
 // Helpers Tests
-require('./steps/helpers_spec.js')(globo.app);
+require('./steps/helpers_spec.js')(apiclientsminutrade.app);
 
 // Clients Tests
-require('./steps/clients_spec.js')(globo.app);
+require('./steps/clients_spec.js')(apiclientsminutrade.app);
 
 // Auth Tests
-require('./steps/auth_spec.js')(globo.app);
+require('./steps/auth_spec.js')(apiclientsminutrade.app);
